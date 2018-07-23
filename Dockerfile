@@ -1,4 +1,4 @@
-FROM python:2.7.14-slim
+FROM python:2.7.15-slim
 
 # set the working directory to /app
 WORKDIR /app
@@ -25,4 +25,4 @@ RUN cd ugc_norm && sh configure.sh
 EXPOSE 5000
 
 # run app.py when the container launches
-CMD ["gunicorn", "app:APP", "-b", ":5000"]
+CMD ["gunicorn", "__init__:create_app()", "-b", ":5000"]
