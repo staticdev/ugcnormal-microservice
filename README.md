@@ -1,5 +1,4 @@
-ugcnormal-microservice
-======================
+# ugcnormal-microservice
 
 Microsserviço REST para normalização pt\_BR usando o
 [UGCNormal](https://github.com/avanco/UGCNormal). Ideal para aplicações
@@ -8,14 +7,12 @@ que precisam de normalização online como chatbots.
 Webservice baseado no ugcnormal\_interface
 [](https://github.com/thiagootuler/ugcnormal_interface).
 
-Requisitos
-----------
+## Requisitos
 
--   Instalar Docker-CE 18.03.1+
--   900 Mb de espaço em disco para imagem
+- Instalar Docker-CE 18.03.1+
+- 900 Mb de espaço em disco para imagem
 
-Execução
---------
+## Execução
 
 Rodar os comandos:
 
@@ -35,19 +32,18 @@ sudo docker stop ugcnormal
 sudo docker rm ugcnormal
 ```
 
-Exemplos de uso
----------------
+## Exemplos de uso
 
 Basta fazer um POST da mensagem a ser normalizada na url /reply passando
 a mensagem no campo "message" e o método no campo "method".
 
 Métodos disponíveis:
 
--   token: tokenizer
--   spell: speller
--   acronym: acronyms searcher
--   textese: untextese
--   proper\_noun: proper noun normalizer
+- token: tokenizer
+- spell: speller
+- acronym: acronyms searcher
+- textese: untextese
+- proper\_noun: proper noun normalizer
 
 A mensagem normalizada é retornada no campo "reply". O status da
 requisição no campo "status", tendo com valor padrão para sucesso "ok".
